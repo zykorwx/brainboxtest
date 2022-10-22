@@ -1,5 +1,5 @@
 <template>
-    <div class="flex">
+    <div class="flex shadow-md" :class="{[store.menuBorder]: store.menuBorder}">
         <div
             @click="goToHome"
             class="self-center w-10 p-2 hover:bg-gray-700"

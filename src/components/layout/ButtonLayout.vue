@@ -5,14 +5,14 @@
         @mouseleave="this.showLongDescription = false"
         class="flex p-5 cursor-pointer background"
         :class="{
-            [bgColor]: bgColor,
-            [textColor]: textColor,
-            [rounded]: rounded,
+            [mySection.bgColor]: mySection.bgColor,
+            [mySection.textColor]: mySection.textColor,
+            [mySection.rounded]: mySection.rounded,
             ['bg-slate-600']: isSelectedSection,
         }">
         <div class="z-10 self-end">
-            <h2 class="bottom-0 text-5xl animateText" :class="{['text-6xl']: showLongDescription}">{{title}}</h2>
-            <h3 class="mt-6 mb-2 text-sm animateText" :class="{['text-base']: showLongDescription}">{{description}}</h3>
+            <h2 class="bottom-0 text-5xl animateText" :class="{['text-6xl']: showLongDescription}">{{mySection.title}}</h2>
+            <h3 class="mt-6 mb-2 text-sm animateText" :class="{['text-base']: showLongDescription}">{{mySection.description}}</h3>
         </div>
         <span v-for="n in 20" :key="n"></span>
     </div>
@@ -25,33 +25,25 @@ export default {
     data() {
         return {
             showLongDescription: false,
-            store
+            store,
         }
     },
     props: {
         // Styles props
-        bgColor: String,
-        textColor: String,
-        rounded: String,
-        animationColor: String,
-        animationDirection: String,
-        // Data props
-        title: String,
-        description: String,
         sectionName: String,
     },
     methods: {
         changeSection() {
             if (this.pauseUnpauseAnimation === 'paused') {
-                store.changeSelectedSection('HomeSection');
+                store.changeSelectedSection('HomeSection', '');
                 return
             }
-            store.changeSelectedSection(this.sectionName);
+            store.changeSelectedSection(this.mySection.sectionName, `border-b-4 border-[${this.mySection.mainColor}]`);
         },
     },
     computed: {
         pauseUnpauseAnimation() {
-            if (this.store.selectedSection === this.sectionName) {
+            if (this.store.selectedSection === this.mySection.sectionName) {
                 return 'paused'
             }
             return 'running'
@@ -61,7 +53,16 @@ export default {
                 return true
             }
             return false
-        }
+        },
+        mySection() {
+            return this.store[this.sectionName]
+        },
+        animationColor() {
+            return this.mySection.animationColor
+        },
+        animationDirection() {
+            return this.mySection.animationDirection
+        },
     }
 }
 </script>

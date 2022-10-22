@@ -6,8 +6,8 @@
 </template>
 
 <script>
-  import MainSection from './components/MainSection.vue'
-  import ButtonsSection from './components/sections/ButtonsSection.vue'
+  import MainSection from '@/components/MainSection.vue'
+  import ButtonsSection from '@/components/sections/ButtonsSection.vue'
 
   export default {
     name: 'App',
@@ -15,10 +15,6 @@
       ButtonsSection,
       MainSection,
     },
-    data() {
-      return {}
-    },
-    methods: {}
   }
 </script>
 

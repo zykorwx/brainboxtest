@@ -13,7 +13,7 @@ import { store } from '@/store/store.js'
 import HomeSection from '@/components/sections/HomeSection.vue'
 import AboutSection from '@/components/sections/AboutSection.vue'
 import HelpSection from '@/components/sections/HelpSection.vue'
-import ExploreSection from '@/components/sections/ExploreSection.vue'
+import WhatWeDoSection from '@/components/sections/WhatWeDoSection.vue'
 import StoriesSection from '@/components/sections/StoriesSection.vue'
 import MenuLayout from '@/components/layout/MenuLayout.vue'
 
@@ -23,7 +23,7 @@ export default {
         HomeSection,
         AboutSection,
         HelpSection,
-        ExploreSection,
+        WhatWeDoSection,
         StoriesSection,
         MenuLayout,
     },
@@ -32,7 +32,6 @@ export default {
             store
         }
     },
-    methods: {}
 }
 </script>
 
