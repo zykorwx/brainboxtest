@@ -8,7 +8,7 @@
             [mySection.bgColor]: mySection.bgColor,
             [isSelectedSection ? '#fff' : mySection.textColor]: mySection.textColor,
             [mySection.rounded]: mySection.rounded,
-            ['bg-slate-600']: isSelectedSection,
+            ['bg-gray-900']: isSelectedSection,
         }">
         <div v-show="isSelectedSection" class="z-10 inline-flex self-start">
             <div class="w-10 h-10">

@@ -8,7 +8,7 @@
         heroes.
       </div>
     </div>
-    <div class="w-4/5 mt-12 text-xl text-center">
+    <div class="w-4/5 mt-12 text-2xl tracking-wider text-center">
       Technology with a purpose to make the world better.
     </div>
     <div>

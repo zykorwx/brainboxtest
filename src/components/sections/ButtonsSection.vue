@@ -7,7 +7,7 @@
         
       </div>
       <div class="grid grid-rows-2">
-        <button-layout sectionName="StoriesSection"></button-layout>
+        <button-layout sectionName="OurProjectsSection"></button-layout>
         <button-layout sectionName="HelpSection"></button-layout>
       </div>
     </div>

@@ -4,7 +4,7 @@ export const store = reactive({
   // Static button data
   OurFormulaSection: {
     title: 'Our formula',
-    description: 'More than tech.',
+    description: 'More than tech',
     sectionName: 'OurFormulaSection',
     // Styles
     mainColor: '#323ff8',
@@ -14,10 +14,10 @@ export const store = reactive({
     animationColor: 'rgb(234 225 254 / 20%)',
     animationDirection: 'alternate',
   },
-  StoriesSection: {
-    title: 'Stories',
-    description: 'Our customer and company stories',
-    sectionName: 'StoriesSection',
+  OurProjectsSection: {
+    title: 'Our projects',
+    description: 'People & impact',
+    sectionName: 'OurProjectsSection',
     // Styles
     mainColor: '#f77c2f',
     bgColor: 'bg-[#f77c2f]',
