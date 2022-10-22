@@ -13,17 +13,5 @@ export default {
         },
         styles: String
     },
-    data() {
-        return {
-            procesando: false,
-            correcto: false,
-            error: false,
-            persona: {
-                nombre: '',
-                apellido: '',
-                email: '',
-            },
-        }
-    },
 }
 </script>

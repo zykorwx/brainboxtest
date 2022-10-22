@@ -1,23 +1,21 @@
 <template>
     <div id="mainSection" class="mt-4 mb-4 ml-4">
-        <div>
-            <icon-feather :src="require('@/assets/icons/search.svg')" :styles="text-white"></icon-feather>
+        <menu-layout></menu-layout>
+        <div class="pt-8 pl-12 pr-12 h-5/6">
+            <component :is="store.selectedSection"></component>
         </div>
-        <component :is="store.selectedSection"></component>
     </div>
 </template>
 
 <script>
 import { store } from '@/store/store.js'
 // Import left content
-import HomeSection from './sections/HomeSection.vue'
-import AboutSection from './sections/AboutSection.vue'
-import HelpSection from './sections/HelpSection.vue'
-import ExploreSection from './sections/ExploreSection.vue'
-import StoriesSection from './sections/StoriesSection.vue'
-
-// Common
-import IconFeather from '@/components/common/IconFeather.vue'
+import HomeSection from '@/components/sections/HomeSection.vue'
+import AboutSection from '@/components/sections/AboutSection.vue'
+import HelpSection from '@/components/sections/HelpSection.vue'
+import ExploreSection from '@/components/sections/ExploreSection.vue'
+import StoriesSection from '@/components/sections/StoriesSection.vue'
+import MenuLayout from '@/components/layout/MenuLayout.vue'
 
 export default {
     name: 'main-section',
@@ -27,7 +25,7 @@ export default {
         HelpSection,
         ExploreSection,
         StoriesSection,
-        IconFeather,
+        MenuLayout,
     },
     data() {
         return {
