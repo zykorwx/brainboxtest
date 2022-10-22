@@ -42,6 +42,10 @@ export default {
     },
     methods: {
         changeSection() {
+            if (this.pauseUnpauseAnimation === 'paused') {
+                store.changeSelectedSection('HomeSection');
+                return
+            }
             store.changeSelectedSection(this.sectionName);
         },
     },
