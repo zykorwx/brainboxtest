@@ -3,13 +3,19 @@
         @click="changeSection"
         @mouseover="this.showLongDescription = true"
         @mouseleave="this.showLongDescription = false"
-        class="flex p-5 cursor-pointer background"
+        class="grid p-5 cursor-pointer background"
         :class="{
             [mySection.bgColor]: mySection.bgColor,
-            [mySection.textColor]: mySection.textColor,
+            [isSelectedSection ? '#fff' : mySection.textColor]: mySection.textColor,
             [mySection.rounded]: mySection.rounded,
             ['bg-slate-600']: isSelectedSection,
         }">
+        <div v-show="isSelectedSection" class="z-10 inline-flex self-start">
+            <div class="w-10 h-10">
+                <icon-feather :src="require('@/assets/icons/arrow-left.svg')" styles="text-white"></icon-feather>
+            </div>
+            <div class="text-sm animateText" :class="{['text-base']: isSelectedSection}">Back to home</div>
+        </div>
         <div class="z-10 self-end">
             <h2 class="bottom-0 text-5xl animateText" :class="{['text-6xl']: showLongDescription}">{{mySection.title}}</h2>
             <h3 class="mt-6 mb-2 text-sm animateText" :class="{['text-base']: showLongDescription}">{{mySection.description}}</h3>
@@ -20,6 +26,9 @@
 
 <script>
 import { store } from '@/store/store.js'
+// Common
+import IconFeather from '@/components/common/IconFeather.vue'
+
 export default {
     name: 'button-layout',
     data() {
@@ -27,6 +36,9 @@ export default {
             showLongDescription: false,
             store,
         }
+    },
+    components: {
+        IconFeather,
     },
     props: {
         // Styles props

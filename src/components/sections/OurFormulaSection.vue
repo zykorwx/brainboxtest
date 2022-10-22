@@ -19,7 +19,7 @@
 
 <script>
 export default {
-  name: 'what-we-do-section',
+  name: 'our-formula-section',
 }
 </script>
 

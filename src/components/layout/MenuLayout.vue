@@ -12,6 +12,7 @@
             class="self-center w-10 p-2 hover:bg-gray-600">
             <icon-feather :src="require('@/assets/icons/search.svg')" styles="text-white"></icon-feather>
         </div>
+        <div v-show="!isSearching" class="text-[#fefefe] h-10 px-3 py-2">{{currentSection.title}}</div>
         <div :class="{invisible: !isSearching}" class="flex">
             <input 
                 @keyup.enter="onSearchPressEnter"
@@ -22,6 +23,7 @@
                 class="self-center w-10 p-2 ml-1 hover:bg-gray-600">
                 <icon-feather :src="require('@/assets/icons/search.svg')" styles="text-white"></icon-feather>
             </div>
+            <div class="text-[#fefefe] h-10 px-3 py-2">{{currentSection.title}}</div>
         </div>
     </div>
 </template>
@@ -61,6 +63,9 @@ export default {
         isInHome() {
             return this.store.selectedSection === homeSection
         },
+        currentSection() {
+            return this.store[this.store.selectedSection]
+        }
     },
 }
 </script>

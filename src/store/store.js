@@ -2,10 +2,10 @@ import { reactive } from 'vue'
 
 export const store = reactive({
   // Static button data
-  buttonWhatWeDo: {
-    title: 'What we do',
+  OurFormulaSection: {
+    title: 'Our formula',
     description: 'More than tech.',
-    sectionName: 'WhatWeDoSection',
+    sectionName: 'OurFormulaSection',
     // Styles
     mainColor: '#323ff8',
     bgColor: 'bg-[#323ff8]',
@@ -14,7 +14,7 @@ export const store = reactive({
     animationColor: 'rgb(234 225 254 / 20%)',
     animationDirection: 'alternate',
   },
-  buttonStories: {
+  StoriesSection: {
     title: 'Stories',
     description: 'Our customer and company stories',
     sectionName: 'StoriesSection',
@@ -26,7 +26,7 @@ export const store = reactive({
     animationColor: 'rgb(234 225 254 / 20%)',
     animationDirection: 'alternate-reverse',
   },
-  buttonAbout: {
+  AboutSection: {
     title: 'About',
     description: 'Our company history',
     sectionName: 'AboutSection',
@@ -38,7 +38,7 @@ export const store = reactive({
     animationColor: 'rgb(50 63 248 / 20%)',
     animationDirection: 'alternate',
   },
-  buttonHelp: {
+  HelpSection: {
     title: 'Help',
     description: 'FAQ and Support',
     sectionName: 'HelpSection',
@@ -50,6 +50,10 @@ export const store = reactive({
     animationColor: 'rgb(234 225 254 / 20%)',
     animationDirection: 'alternate-reverse',
   },
+  HomeSection: {
+    title: 'Home',
+    sectionName: 'HomeSection',
+  },
 
   // Default section
   selectedSection: 'HomeSection',
@@ -58,7 +62,6 @@ export const store = reactive({
   // Actions
   changeSelectedSection(newSection, menuBorder) {
     this.selectedSection = newSection
-    console.log('HERE => ', this);
     this.menuBorder = menuBorder
   }
 })

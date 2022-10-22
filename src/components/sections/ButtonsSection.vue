@@ -2,13 +2,13 @@
   <div id="containerButtons" class="flex mt-4 mb-4 mr-4">
     <div class="grid items-stretch w-full grid-cols-2">
       <div class="grid grid-rows-2">
-        <button-layout sectionName="buttonWhatWeDo"></button-layout>
-        <button-layout sectionName="buttonAbout"></button-layout>
+        <button-layout sectionName="OurFormulaSection"></button-layout>
+        <button-layout sectionName="AboutSection"></button-layout>
         
       </div>
       <div class="grid grid-rows-2">
-        <button-layout sectionName="buttonStories"></button-layout>
-        <button-layout sectionName="buttonHelp"></button-layout>
+        <button-layout sectionName="StoriesSection"></button-layout>
+        <button-layout sectionName="HelpSection"></button-layout>
       </div>
     </div>
   </div>
