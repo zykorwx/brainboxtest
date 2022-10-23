@@ -5,7 +5,7 @@
     </div>
     <div class="w-full mt-12 ">
       <div  class="grid grid-cols-4 p-4 text-lg rounded">
-        <img class="w-full col-span-2 p-4" src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=50" />
+        <img class="col-span-2 p-4 rounded-full" src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=50" />
         <div class="self-center col-span-2 ml-4">
           <span class="text-2xl font-semibold">We love </span> to help companies in their digital transformation process using the most efficient <span class="text-2xl font-semibold">technologies</span>
           <span class="text-2xl font-semibold"> and methodologies</span>.
@@ -16,7 +16,7 @@
           <span class="text-2xl font-semibold">We want</span> to put all our talent at the service of a single purpose: making digital products that help to <span class="text-2xl font-semibold"> make the world a
           better place.</span>
         </div>
-        <img class="w-full col-span-2 p-4"
+        <img class="col-span-2 p-4 rounded-full"
           src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=50" />
       </div>
     </div>

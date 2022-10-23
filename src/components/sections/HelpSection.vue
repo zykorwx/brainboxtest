@@ -1,31 +1,34 @@
 <template>
   <div class="flex flex-col h-full background">
     <div class="w-4/5 p-4">
-      <div class="text-6xl font-bold tracking-wider text-black myShadow">Talent in Action.</div>
-      <div class="w-full ml-5 text-lg">
-        Behind our teams are very talented people
+      <div class="text-6xl font-bold tracking-wider text-black myShadow">FAQ</div>
+    </div>
+    <div>
+      <div class="mt-2 mb-1 text-lg font-semibold">How can we help you?</div>
+      <accordion-layout></accordion-layout>
+    </div>
+    <div class="p-10 mt-8 text-center rounded">
+      <div class="text-2xl">Need more help?</div>
+
+      <div class="grid grid-cols-2 gap-4 mt-4">
+        <div class="p-2 text-center border rounded cursor-pointer hover:bg-gray-600/60">
+          <div class="text-2xl">Ask the Help Community</div>
+          <div class="text-base text-gray-400">Get answers from community experts</div>
+        </div>
+        <div class="p-2 text-center border rounded cursor-pointer hover:bg-gray-600/60">
+          <div class="text-2xl">Contact us</div>
+          <div class="text-base text-gray-400">Tell us more and we’ll help you get there</div>
+        </div>
       </div>
-    </div>
-    <div class="ml-6">
-      <image-team name="Saul Pineda" :src="require('@/assets/about/saul.png')"
-        description="I'm a full stack developer, I'm dedicated, I love programming, I like teamwork, I'm self-taught, I like to study about my area of work and learn new things, I like challenges." />
-    </div>
-    <div class="mr-6">
-      <image-team name="Mike Mccray" :src="require('@/assets/about/dev1.png')" openTo="left"
-        description="I am a web developer specializing in VueJS and Javascript. I have over 4 years of experience in the industry and have worked on a variety of projects." />
-    </div>
-    <div class="ml-6">
-      <image-team name="Matylda Beil" :src="require('@/assets/about/dev2.png')"
-        description="I am a frontend developer with years of experience in VueJS and JavaScript. I am looking for a new opportunity to use my skills and knowledge to build amazing things." />
+
     </div>
   </div>
 </template>
 
 <script>
-import ImageTeam from '@/components/common/ImageTeam.vue'
-
+import AccordionLayout from '@/components/layout/AccordionLayout.vue'
 export default {
-  components: { ImageTeam },
+  components: { AccordionLayout },
   name: 'help-section',
 }
 </script>
@@ -39,6 +42,6 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-image: url(@/assets/backgrounds/about.svg);
+  background-image: url(@/assets/backgrounds/help.svg);
 }
 </style>

@@ -28,7 +28,7 @@ export const store = reactive({
   },
   AboutSection: {
     title: 'About',
-    description: 'Our company history',
+    description: 'Talent in Action',
     sectionName: 'AboutSection',
     // Styles
     mainColor: '#e8e0fe',

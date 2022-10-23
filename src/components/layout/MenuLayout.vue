@@ -2,14 +2,14 @@
     <div class="flex shadow-md" :class="{[store.menuBorder]: store.menuBorder}">
         <div
             @click="goToHome"
-            class="self-center w-10 p-2 hover:bg-gray-700"
+            class="self-center w-10 p-2 cursor-pointer hover:bg-gray-600"
             :class="{['bg-gray-600']: isInHome}">
             <icon-feather :src="require('@/assets/icons/home.svg')" styles="text-white"></icon-feather>
         </div>
         <div 
             v-show="!isSearching"
             @click="setFocusToSearch"
-            class="self-center w-10 p-2 hover:bg-gray-600">
+            class="self-center w-10 p-2 cursor-pointer hover:bg-gray-600">
             <icon-feather :src="require('@/assets/icons/search.svg')" styles="text-white"></icon-feather>
         </div>
         <div v-show="!isSearching" class="text-[#fefefe] h-10 px-3 py-2">{{currentSection.title}}</div>
@@ -20,7 +20,7 @@
                 class="h-10 px-3 py-2 text-gray-600 border border-gray-600 rounded"
                 v-model="textToSearch" />
             <div v-show="isSearching" @click="onSearchPressEnter"
-                class="self-center w-10 p-2 ml-1 hover:bg-gray-600">
+                class="self-center w-10 p-2 ml-1 cursor-pointer hover:bg-gray-600">
                 <icon-feather :src="require('@/assets/icons/search.svg')" styles="text-white"></icon-feather>
             </div>
             <div class="text-[#fefefe] h-10 px-3 py-2">{{currentSection.title}}</div>

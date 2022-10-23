@@ -2,7 +2,7 @@
     <div class="flex">
         <div v-show="openTo === 'left'" class="w-full pt-6 pb-1 -mr-20" :class="{['opacity-0']: !showInfo || openTo === 'left', ['opacity-100']: showInfo && openTo === 'left'}">
             <div class="w-full pt-2 pb-4 pl-4 pr-20 text-black bg-white h-28 rounded-3xl">
-                <div class="text-2xl font-bold">{{name}}</div>
+                <div class="text-2xl font-bold text-[#6f74cf]">{{name}}</div>
                 <div class="text-[0.9vw]">{{description}}</div>
             </div>
         </div>
@@ -25,7 +25,7 @@
         </div>
         <div class="w-full pt-6 pb-1 -ml-20" v-show="showInfo && openTo === 'right'">
             <div class="w-full pt-2 pb-4 pl-20 text-black bg-white h-28 rounded-3xl">
-                <div class="text-2xl font-bold">{{name}}</div>
+                <div class="text-2xl font-bold text-[#6f74cf]">{{name}}</div>
                 <div class="text-[0.9vw]">{{description}}</div>
             </div>
         </div>

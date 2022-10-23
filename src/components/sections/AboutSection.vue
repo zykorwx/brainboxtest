@@ -1,10 +1,7 @@
 <template>
   <div class="flex flex-col h-full background">
     <div class="w-4/5 p-4">
-      <div class="text-6xl font-bold tracking-wider text-black myShadow">Talent in Action.</div>
-      <div class="w-full ml-5 text-lg">
-            Behind our teams are very talented people
-      </div>
+      <div class="text-6xl font-bold tracking-wider text-black myShadow">Behind our teams are very talented people.</div>
     </div>
     <div class="mt-6 ml-6">
       <image-team 
