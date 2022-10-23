@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import ButtonLayout from '@/components/layout/ButtonLayout.vue'
+import ButtonLayout from '@/components/common/ButtonLayout.vue'
 
 export default {
   components: { ButtonLayout },

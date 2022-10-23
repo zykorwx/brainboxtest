@@ -15,7 +15,7 @@ import AboutSection from '@/components/sections/AboutSection.vue'
 import HelpSection from '@/components/sections/HelpSection.vue'
 import OurFormulaSection from '@/components/sections/OurFormulaSection.vue'
 import OurProjectsSection from '@/components/sections/OurProjectsSection.vue'
-import MenuLayout from '@/components/layout/MenuLayout.vue'
+import MenuLayout from '@/components/common/MenuLayout.vue'
 
 export default {
     name: 'main-section',

@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import AccordionLayout from '@/components/layout/AccordionLayout.vue'
+import AccordionLayout from '@/components/common/AccordionLayout.vue'
 export default {
   components: { AccordionLayout },
   name: 'help-section',
