@@ -1,5 +1,5 @@
 <template>
-  <div id="containerButtons" class="flex mt-4 mb-4 mr-4">
+  <div id="containerButtons" class="fixed right-0 flex w-1/2 mt-4 mb-4 mr-4">
     <div class="grid items-stretch w-full grid-cols-2">
       <div class="grid grid-rows-2">
         <button-layout sectionName="OurFormulaSection"></button-layout>
