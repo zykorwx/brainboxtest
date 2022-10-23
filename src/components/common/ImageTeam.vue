@@ -1,12 +1,12 @@
 <template>
     <div class="flex">
         <div v-show="openTo === 'left'" class="w-full pt-6 pb-1 -mr-20" :class="{['opacity-0']: !showInfo || openTo === 'left', ['opacity-100']: showInfo && openTo === 'left'}">
-            <div class="w-full pt-2 pb-4 pl-4 pr-20 text-black bg-white h-28 rounded-3xl">
+            <div class="w-full pt-2 pb-4 pl-4 pr-20 overflow-y-auto text-black bg-white scrollbar-hide h-28 rounded-3xl sm:overflow-auto">
                 <div class="text-2xl font-bold text-[#6f74cf]">{{name}}</div>
-                <div class="text-[0.9vw]">{{description}}</div>
+                <div class="sm:text-[0.9vw]  text-base">{{description}}</div>
             </div>
         </div>
-        <div class="relative self-end team-image" @mouseenter="changeShowInfo(true)" @mouseleave="changeShowInfo(false)">
+        <div class="relative self-end team-image" @mouseenter="changeShowInfo(true)" @mouseleave="changeShowInfo(false)" @click="changeFixed">
             <div class="absolute z-0 img" :class="{[imageSize]: imageSize}">
                 <img :src=src />
             </div>
@@ -24,9 +24,9 @@
             </svg>
         </div>
         <div class="w-full pt-6 pb-1 -ml-20" v-show="showInfo && openTo === 'right'">
-            <div class="w-full pt-2 pb-4 pl-20 text-black bg-white h-28 rounded-3xl">
+            <div class="w-full pt-2 pb-4 pl-20 overflow-y-auto text-black bg-white scrollbar-hide h-28 rounded-3xl sm:overflow-auto">
                 <div class="text-2xl font-bold text-[#6f74cf]">{{name}}</div>
-                <div class="text-[0.9vw]">{{description}}</div>
+                <div class="sm:text-[0.9vw]  text-base">{{description}}</div>
             </div>
         </div>
     </div>
@@ -36,11 +36,22 @@
 export default {
     name: 'image-team',
     data() {
-        return { showInfo: false, }
+        return { 
+            showInfo: false,
+            fixed: false,
+        }
     },
     methods: {
         changeShowInfo(status) {
-            this.showInfo = status
+            if (this.fixed) {
+                this.showInfo = true
+            } else {
+                this.showInfo = status
+            }
+        },
+        changeFixed() {
+            this.showInfo = !this.fixed
+            this.fixed = !this.fixed
         }
     },
     props: {
@@ -99,5 +110,8 @@ export default {
 .team-image:hover .outer-circle {
     transform: rotate(360deg);
     fill: #e8e0fe;
+}
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
 }
 </style>
