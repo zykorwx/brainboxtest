@@ -1,7 +1,7 @@
 <template>
-    <div id="mainSection" class="mt-4 mb-4 ml-4">
+    <div id="mainSection" class="mb-12 sm:mt-4 sm:mb-4 sm:ml-4">
         <menu-layout></menu-layout>
-        <div class="pt-8 pl-12 pr-12 h-5/6">
+        <div class="p-1 sm:pt-8 sm:pl-12 sm:pr-12 h-5/6">
             <component :is="store.selectedSection"></component>
         </div>
     </div>

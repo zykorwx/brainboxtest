@@ -63,5 +63,5 @@ export const store = reactive({
   changeSelectedSection(newSection, menuBorder) {
     this.selectedSection = newSection
     this.menuBorder = menuBorder
-  }
+  },
 })

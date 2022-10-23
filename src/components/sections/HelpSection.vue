@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col h-full background">
+  <div class="flex flex-col pb-20 background">
     <div class="w-4/5 p-4">
       <div class="text-6xl font-bold tracking-wider text-black myShadow">FAQ</div>
     </div>
@@ -12,11 +12,11 @@
 
       <div class="grid grid-cols-2 gap-4 mt-4">
         <div class="p-2 text-center border rounded cursor-pointer hover:bg-gray-600/60">
-          <div class="text-2xl">Ask the Help Community</div>
+          <div class="text-xl md:text-2xl">Ask the Help Community</div>
           <div class="text-base text-gray-400">Get answers from community experts</div>
         </div>
         <div class="p-2 text-center border rounded cursor-pointer hover:bg-gray-600/60">
-          <div class="text-2xl">Contact us</div>
+          <div class="text-xl md:text-2xl">Contact us</div>
           <div class="text-base text-gray-400">Tell us more and we’ll help you get there</div>
         </div>
       </div>

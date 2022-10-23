@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col h-full background">
+  <div class="flex flex-col pb-12 background">
     <div class="w-4/5 p-4 rounde">
       <div class="text-6xl font-bold tracking-wider text-black myShadow">Building the digital future.</div>
     </div>

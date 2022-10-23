@@ -1,19 +1,21 @@
 <template>
     <div class="flex shadow-md" :class="{[store.menuBorder]: store.menuBorder}">
-        <div
-            @click="goToHome"
-            class="self-center w-10 p-2 cursor-pointer hover:bg-gray-600"
-            :class="{['bg-gray-600']: isInHome}">
-            <icon-feather :src="require('@/assets/icons/home.svg')" styles="text-white"></icon-feather>
+        <div class="flex">
+            <div
+                @click="goToHome"
+                class="self-center w-10 p-2 cursor-pointer hover:bg-gray-600"
+                :class="{['bg-gray-600']: isInHome}">
+                <icon-feather :src="require('@/assets/icons/home.svg')" styles="text-white"></icon-feather>
+            </div>
+            <div 
+                v-show="!isSearching"
+                @click="setFocusToSearch"
+                class="self-center w-10 p-2 cursor-pointer hover:bg-gray-600">
+                <icon-feather :src="require('@/assets/icons/search.svg')" styles="text-white"></icon-feather>
+            </div>
         </div>
-        <div 
-            v-show="!isSearching"
-            @click="setFocusToSearch"
-            class="self-center w-10 p-2 cursor-pointer hover:bg-gray-600">
-            <icon-feather :src="require('@/assets/icons/search.svg')" styles="text-white"></icon-feather>
-        </div>
-        <div v-show="!isSearching" class="text-[#fefefe] h-10 px-3 py-2">{{currentSection.title}}</div>
-        <div :class="{invisible: !isSearching}" class="flex">
+        <div v-show="!isSearching" class="text-[#fefefe] h-10 px-3 py-2 w-full">{{currentSection.title}}</div>
+        <div v-show="isSearching" class="flex">
             <input 
                 @keyup.enter="onSearchPressEnter"
                 ref="searchInput"

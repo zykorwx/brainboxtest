@@ -3,22 +3,22 @@
         @click="changeSection"
         @mouseover="this.showLongDescription = true"
         @mouseleave="this.showLongDescription = false"
-        class="grid p-5 cursor-pointer background"
+        class="w-1/2 h-10 p-1 ml-1 -mb-1 rounded cursor-pointer sm:grid sm:p-5 background sm:w-full sm:h-full"
         :class="{
             [mySection.bgColor]: mySection.bgColor,
             [isSelectedSection ? '#fff' : mySection.textColor]: mySection.textColor,
-            [mySection.rounded]: mySection.rounded,
+            ['sm:' + mySection.rounded]: mySection.rounded,
             ['bg-gray-900']: isSelectedSection,
         }">
-        <div v-show="isSelectedSection" class="z-10 inline-flex self-start">
+        <div v-show="isSelectedSection" class="z-10 self-start hidden sm:inline-flex">
             <div class="w-10 h-10">
                 <icon-feather :src="require('@/assets/icons/arrow-left.svg')" styles="text-white"></icon-feather>
             </div>
             <div class="text-sm animateText" :class="{['text-base']: isSelectedSection}">Back to home</div>
         </div>
-        <div class="z-10 self-end">
-            <h2 class="bottom-0 text-5xl animateText" :class="{['text-6xl']: showLongDescription}">{{mySection.title}}</h2>
-            <h3 class="mt-6 mb-2 text-sm animateText" :class="{['text-base']: showLongDescription}">{{mySection.description}}</h3>
+        <div class="z-10 self-start sm:self-end">
+            <h2 class="text-[3.5vw] sm:bottom-0 sm:text-5xl animateText" :class="{['sm:text-6xl text-[3.9vw]']: showLongDescription}">{{mySection.title}}</h2>
+            <h3 class="hidden sm:block sm:mt-6 sm:mb-2 sm:text-sm animateText" :class="{['sm:text-base']: showLongDescription}">{{mySection.description}}</h3>
         </div>
         <span v-for="n in 20" :key="n"></span>
     </div>
@@ -88,8 +88,6 @@ export default {
     position: relative;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
     overflow: hidden;
 }
 

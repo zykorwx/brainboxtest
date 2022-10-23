@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-2">
+  <div class="sm:grid sm:grid-cols-2">
     <main-section></main-section>
     <buttons-section></buttons-section>
   </div>
